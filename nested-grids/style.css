@@ -1,0 +1,35 @@
+body {
+    color: #fff;
+    text-align: center;
+}
+
+#content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#content div {
+    background-color: #3bbced;
+    padding: 30px;
+}
+
+#content div:nth-child(even) {
+    background-color: #777;
+    padding: 30px;
+}
+
+.nested {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    grid-column: span 2;
+}
+
+.nested p {
+    border: 3px solid white;
+    margin: 0;
+    padding: 20px;
+}

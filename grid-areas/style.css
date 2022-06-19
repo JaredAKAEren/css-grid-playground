@@ -1,10 +1,10 @@
 body {
+    margin: 0;
     background-color: #eee;
     text-align: center;
 }
 
 #content {
-    max-width: 960px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -12,11 +12,29 @@ body {
     gap: 10px;
     grid-template-areas:
         "h h h h"
-        "n m m a"
-        "n m m a"
-        "n s s a"
-        "n s s a"
+        "n n n n"
+        "m m m m"
+        "m m m m"
+        "s s a a"
         "f f f f";
+}
+
+@media screen and (min-width:800px) {
+    #content {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        gap: 10px;
+        grid-template-areas:
+            "h h h h"
+            "n m m a"
+            "n m m a"
+            "n s s a"
+            "n s s a"
+            "f f f f";
+    }
 }
 
 #content>* {
